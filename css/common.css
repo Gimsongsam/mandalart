@@ -29,11 +29,20 @@ header .wrap .logo a img{
 
 header .wrap nav{display: flex;}
 header .wrap nav ul{display: flex;}
-header .wrap nav ul li{margin: 10px;}
+header .wrap nav ul li{padding: 0 10px;}
 header .wrap nav ul li a{
     display: block;
     font-size: 16px;
     color: #555
+}
+
+header .wrap nav ul.left{}
+header .wrap nav ul.left > li:last-child{padding-right: 20px;}
+
+header .wrap nav ul.right{}
+header .wrap nav ul.right > li:first-child{
+    border-left: 1px solid #555;
+    padding-left: 20px;
 }
 
 
