@@ -1,0 +1,40 @@
+@charset "utf-8";
+/* 폰트설정(구글폰트 가져오기, 자체 fonts라는 폴더로부터 연동) */
+
+*{-webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;
+/* 주요폰트 설정 */}
+html, body{margin: 0; padding: 0;}
+header, section, article, aside, main, nav, footer{display: block;}
+
+h1, h2, h3, h4, h5, h6, p{margin: 0;}
+ul, ol{margin: 0; padding: 0; list-style: none;}
+a{text-decoration: none;}
+
+/* header */
+header{
+    height: 80px;
+    border-bottom: 1px solid #aaa;
+}
+header .wrap{
+    width: 1200px; height: 100%;
+    margin: 0 auto;
+    display: flex; align-items: center; justify-content: space-between;
+}
+header .wrap .logo{}
+header .wrap .logo a{display: block;}
+header .wrap .logo a img{
+    display: block;
+    height: 60px;
+}
+
+header .wrap nav{display: flex;}
+header .wrap nav ul{display: flex;}
+header .wrap nav ul li{margin: 10px;}
+header .wrap nav ul li a{
+    display: block;
+    font-size: 16px;
+    color: #555
+}
+
+
+

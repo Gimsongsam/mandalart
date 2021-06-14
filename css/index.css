@@ -1,0 +1,72 @@
+@charset "utf-8";
+
+/*********** main **************/
+
+main{}
+main .wrap{
+    width: 1200px; height: 100vh;
+    margin: 0 auto;
+    position: relative;
+}
+
+main .wrap .txt_part{
+    width: 100%;
+    position: absolute;
+    top: 50%; left: 50%; transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+main .wrap .txt_part h2{
+    font-size: 80px; line-height: 1.5;
+    color: #333;
+}
+main .wrap .txt_part p.sub_title{
+    font-size: 60px; line-height: 1;
+    color: #555;
+    padding-bottom: 50px;
+}
+
+main .wrap .txt_part h3{
+    width: 400px; height: 80px;
+    margin: 0 auto;
+    background-color: #1759d3;
+    border-radius: 40px;
+    box-shadow: 0px 0px 10px #1759d3;
+}
+main .wrap .txt_part h3 a{
+    display: block;
+    line-height: 80px;
+    color: #fff; font-size: 50px;
+}
+
+main .wrap .txt_part p.login{
+    font-size: 30px;
+    padding-top: 80px; padding-bottom: 30px;
+    color: #555;
+}
+
+main .wrap .txt_part ul.login_btn{
+    display: flex; align-items: center; justify-content: center;
+}
+main .wrap .txt_part ul.login_btn li{
+    width: 300px; height: 70px;
+    margin: 0 35px;
+    border: 1px solid #aaa;
+    border-radius: 35px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.25);
+    overflow: hidden;
+}
+
+main .wrap .txt_part ul.login_btn li a{
+    display: block;
+    color: #333;
+    font-size: 30px; line-height: 70px;
+}
+
+main .wrap .txt_part ul.login_btn li:hover{border: 1px solid #84e6ff}
+main .wrap .txt_part ul.login_btn li:hover a{
+    background-color: #84e6ff;
+    color: #fff;
+    box-shadow: 0px 0px 5px #84e6ff;
+}
+
