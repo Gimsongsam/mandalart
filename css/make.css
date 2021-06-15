@@ -2,7 +2,10 @@
 
 /************ header ****************/
 
-header{background-color: #1759d3;}
+header{
+    height: 80px;
+    background-color: #1759d3;
+}
 header nav{
     width: 1200px; height: 100%;
     margin: 0 auto;

@@ -7,6 +7,9 @@
     <title>mandalart</title>
     <link rel="stylesheet" href="./css/common.css">
     <link rel="stylesheet" href="./css/index.css">
+
+    <!-- content에 자신의 OAuth 2.0 클라이언트ID를 넣습니다.-->
+    <meta name = "google-signin-client_id" content="979278859034-vlouce9ar0b72ak8m8ftqusula1gh5e1.apps.googleusercontent.com">
     
 </head>
 <body>
@@ -40,12 +43,14 @@
                 <p class="login">아직 로그인을 안하셨나요?</p>
                 <ul class="login_btn">
                     <li><a href="">로그인</a></li>
-                    <li><a href="">회원가입</a></li>
+                    <li class="g-signin2" data-onsuccess="onSignIn" style="width: 300px; height: 70px;"></li>
                 </ul>
             </div>
         </div>
     </main>
 
+<!---------------------- 스크립트 ------------------------>
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
     
 </body>
 </html>

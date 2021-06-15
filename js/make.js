@@ -1,66 +1,62 @@
-// $(document).ready(function(){
-    
-//     //******  동작 구성 ******//
+////////////// 만다라트 포맷 구성 //////////////
+const $mandalart = document.querySelector("#mandalart .chart");
+// console.log($mandalart);
 
-//     $("#mandalart ul").addClass("active");
-//     $("#mandalart ul:eq(4)").removeClass();
+let $mandalart_for = ""
 
+for(i=1; i<=9; i++){
+    $mandalart_for += `
+        <ul>
+            <li><input type="text"></li>
+            <li><input type="text"></li>
+            <li><input type="text"></li>
+            <li><input type="text"></li>
+            <li class="component${i}">
+                <p>{{target${i}}}</p>
+            </li>
+            <li><input type="text"></li>
+            <li><input type="text"></li>
+            <li><input type="text"></li>
+            <li><input type="text"></li>
+        </ul>
+    `
+}
+// console.log($mandalart_for)
+$mandalart.innerHTML = $mandalart_for
 
-//     const $mandalVal1 = $("#mandalart ul:eq(4) li:eq(0) input")
-//     const $mandalVal2 = $("#mandalart ul:eq(4) li:eq(1) input")
-//     const $mandalVal3 = $("#mandalart ul:eq(4) li:eq(2) input")
-//     const $mandalVal4 = $("#mandalart ul:eq(4) li:eq(3) input")
-//     const $mandalVal5 = $("#mandalart ul:eq(4) li:eq(5) input")
-//     const $mandalVal6 = $("#mandalart ul:eq(4) li:eq(6) input")
-//     const $mandalVal7 = $("#mandalart ul:eq(4) li:eq(7) input")
-//     const $mandalVal8 = $("#mandalart ul:eq(4) li:eq(8) input")
+/////////////// middle 세부목표 /////////////////////
+for(i=1; i<=9; i++){
+    if(i==5){
+        continue;
+    }
+    let $mandalart_input = document.querySelector("#mandalart .chart ul:nth-child(5) li:nth-child("+i+") input");
+    console.log($mandalart_input)
+    $mandalart_input.setAttribute("v-model:value","target"+i);
+    $mandalart_input.setAttribute("placeholder","세부목표");
+    console.log(i);
+}
 
-//     $mandalVal1.keyup(() => {
-//         $("#mandalart ul:eq(0) li:eq(4) input").val($mandalVal1.val());
-//         $("#mandalart .wrap ul:eq(0).active").css("opacity","1");
-//         $("#mandalart .wrap ul:eq(0) li input").attr("disabled", false);
-//     });
-//     $mandalVal2.keyup(() => {
-//         $("#mandalart ul:eq(1) li:eq(4) input").val($mandalVal2.val());
-//         $("#mandalart .wrap ul:eq(1).active").css("opacity","1");
-//         $("#mandalart .wrap ul:eq(1) li input").attr("disabled", false);
-//     });
-//     $mandalVal3.keyup(() => {
-//         $("#mandalart ul:eq(2) li:eq(4) input").val($mandalVal3.val());
-//         $("#mandalart .wrap ul:eq(2).active").css("opacity","1");
-//         $("#mandalart .wrap ul:eq(2) li input").attr("disabled", false);
-//     });
-//     $mandalVal4.keyup(() => {
-//         $("#mandalart ul:eq(3) li:eq(4) input").val($mandalVal4.val());
-//         $("#mandalart .wrap ul:eq(3).active").css("opacity","1");
-//         $("#mandalart .wrap ul:eq(3) li input").attr("disabled", false);
-//     });
-//     $mandalVal5.keyup(() => {
-//         $("#mandalart ul:eq(5) li:eq(4) input").val($mandalVal5.val());
-//         $("#mandalart .wrap ul:eq(5).active").css("opacity","1");
-//         $("#mandalart .wrap ul:eq(5) li input").attr("disabled", false);
-//     });
-//     $mandalVal6.keyup(() => {
-//         $("#mandalart ul:eq(6) li:eq(4) input").val($mandalVal6.val());
-//         $("#mandalart .wrap ul:eq(6).active").css("opacity","1");
-//         $("#mandalart .wrap ul:eq(6) li input").attr("disabled", false);
-//     });
-//     $mandalVal7.keyup(() => {
-//         $("#mandalart ul:eq(7) li:eq(4) input").val($mandalVal7.val());
-//         $("#mandalart .wrap ul:eq(7).active").css("opacity","1");
-//         $("#mandalart .wrap ul:eq(7) li input").attr("disabled", false);
-//     });
-//     $mandalVal8.keyup(() => {
-//         $("#mandalart ul:eq(8) li:eq(4) input").val($mandalVal8.val());
-//         $("#mandalart .wrap ul:eq(8).active").css("opacity","1");
-//     });
+// $ document.querySelector("#madalart .chart ul:nth-child(5) input")
 
-// });
+//////////////// 핵심목표 input 변환 //////////////////
+const $core = document.querySelector("#mandalart .chart ul:nth-child(5) li:nth-child(5)");
+// console.log(middle);
+$core.innerHTML = "<input type='text' placeholder='핵심목표'>";
 
 
 
-
-
-
-
+/////////////////// 세부목표 연동 ////////////////////
+let mandalart = new Vue({
+    el : '#mandalart',
+    data : {
+        target1 : '세부목표',
+        target2 : '세부목표',
+        target3 : '세부목표',
+        target4 : '세부목표',
+        target6 : '세부목표',
+        target7 : '세부목표',
+        target8 : '세부목표',
+        target9 : '세부목표',
+    }
+});
 
