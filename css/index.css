@@ -12,7 +12,7 @@ header{
     width: 100%; height: 80px;
     border-bottom: 1px solid #fff;
     background-color: rgba(255, 255, 255, 0.5);
-    position: fixed;
+    position: fixed; top: 0; left: 0;
     z-index: 10;
 }
 header .wrap{
@@ -36,6 +36,11 @@ header .wrap nav ul li a{
     color: #555
 }
 
+header .wrap nav ul li a.active{
+    color: #4686f0;
+    font-weight: bold;
+}
+
 header .wrap nav ul.left{}
 header .wrap nav ul.left > li:last-child{padding-right: 20px;}
 
@@ -48,10 +53,10 @@ header .wrap nav ul.right > li:first-child{
 
 /*********** main **************/
 
-main{}
+main{margin-top: 80px;}
 main .wrap{
     width: 1200px; height: 100vh;
-    margin: 0 auto;
+    margin: 0 auto 300px;
     position: relative;
 }
 
@@ -63,11 +68,11 @@ main .wrap .txt_part{
 }
 
 main .wrap .txt_part h2{
-    font-size: 80px; line-height: 1.5;
+    font-size: 65px; line-height: 1.5;
     color: #333;
 }
 main .wrap .txt_part p.sub_title{
-    font-size: 60px; line-height: 1;
+    font-size: 55px; line-height: 1;
     color: #555;
     padding-bottom: 50px;
 }
@@ -78,12 +83,17 @@ main .wrap .txt_part h3{
     background-color: rgba(255, 255, 255, 0.5);
     border-radius: 40px;
     box-shadow: 0px 0px 10px #4686f0;
+    transition: background-color 0.5s;
 }
 main .wrap .txt_part h3 a{
     display: block;
     line-height: 80px;
     color: #4686f0; font-size: 50px;
+    transition: color 0.5s;
 }
+
+main .wrap .txt_part h3:hover{background-color: rgba(70, 134, 240, 0.6);}
+main .wrap .txt_part h3:hover a{color: #fff;}
 
 main .wrap .txt_part p.login{
     font-size: 30px;
@@ -102,7 +112,7 @@ main .wrap .txt_part ul.login_btn li{
     border-radius: 35px;
     box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.25);
     overflow: hidden;
-    transition: box-shadow 1.5s, border 1.5s;
+    transition: box-shadow 0.5s;
 }
 
 main .wrap .txt_part ul.login_btn li a{
